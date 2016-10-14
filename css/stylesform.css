@@ -1,0 +1,105 @@
+/* import LatoLatin fonts in optimal form for browsers including IE8 */
+@font-face {
+	font-family: "LatoLatin";
+	src: url('fonts/LatoLatin/fonts/LatoLatin-Regular.eot');
+	src: url('fonts/LatoLatin/fonts/LatoLatin-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/LatoLatin/fonts/LatoLatin-Regular.woff2') format('woff2'),
+		 url('fonts/LatoLatin/fonts/LatoLatin-Regular.woff') format('woff'),
+		 url('fonts/LatoLatin/fonts/LatoLatin-Regular.ttf') format('truetype');		 
+	;
+	font-weight: normal;
+	font-style: normal;
+}
+html, body {
+	height: 100%;
+}
+/* simple css reset and font declaration */
+html, body, div, p, form {
+	margin: 0;
+	padding: 0;
+	font-family: "LatoLatin";
+}
+/* make the map cover the page */
+#map {
+	height: 100%;
+}
+/* top full width banner stuck to the top of the page and partially transparent */
+#banner {
+	background-color: rgba(10,79,135,.9);
+	height: 70px;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+}
+/* style the question text */
+#banner p {
+	display: inline;
+	font-size: 1.6em;
+	color: white;
+	padding-left: 1.5%;
+	line-height: 70px;
+	vertical-align: center;
+}
+/* style the form that holds the text input */
+#banner form {
+	display: float;
+	float: right;
+	width: 27%;
+	height: 45%;
+	margin-right: 2%;
+}
+/* style the input filed using the search icon from iBec Creative's Sketch file */
+#banner input {
+
+	width: 100%;
+	display: float;
+	float: right;
+	font-size: 1.3em;
+	height: 100%;
+	margin-top: 15px;
+	padding: 1%;
+	padding-left: 4%;
+	border-radius: 3%;
+	background-image: url('../images/greensearch.png');
+	background-repeat: no-repeat;
+	background-position: right;
+}
+/* add a visual cue to indicate the text input has focus */
+input[type=text]:focus {
+	outline: none;
+	border: 3px solid #7ED321;
+}
+/* centered, stacked layout of top banner for smaller screens */
+@media (max-width: 550px) {
+	#banner {
+		height: 140px;
+	}
+	#banner p {
+		display: block;
+		width: 100%
+		margin: 0 auto;
+		text-align: center;
+	}
+	#banner form {
+		display: block;
+		margin: 0 auto;
+		align: center;
+		height: 25%;
+		width: 100%;
+	}
+	#banner input {
+		display: block;
+		float: none;
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+/* give text breathing room on iPhone 5 */
+@media (max-width: 550px) {
+	#banner p {
+		font-size: 1.4em;
+	}
+}
+
+
+
